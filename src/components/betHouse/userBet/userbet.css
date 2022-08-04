@@ -1,0 +1,15 @@
+.form-control {
+    font-family: 'Rancho', cursive;
+    font-weight: 500;
+    width: 100%;
+    height: 30%;
+    border: none;
+    border-radius: 3px;
+    padding: 0rem 0.75rem;
+    box-sizing: border-box;
+}
+
+.form-control:hover, .form-control:focus{
+    border: none;
+    outline: 0;
+  }

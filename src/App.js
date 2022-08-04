@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Home from "./components/home/Home";
+import { ModalProvider } from "styled-react-modal";
+import { LoginController } from "./context/Login-Context";
+import { BetProvider } from "./context/Bet-Context";
 
-function App() {
+const Div = styled.div`
+  width: 100%;
+  height: 1250px;
+  overflow: hidden;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Div>
+      <LoginController>
+        <BetProvider>
+          <ModalProvider>
+            <Home />
+          </ModalProvider>
+        </BetProvider>
+      </LoginController>
+    </Div>
   );
-}
+};
 
 export default App;
